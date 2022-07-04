@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConversionActivity"
+    android:background="@drawable/bg"
+
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_content"
+        android:padding="10dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:text="Temperature Converter"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:background="#b2beb5"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.5"
+        />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/Text_content"
+    android:layout_marginTop="90dp">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:hint="Enter Value"
+        android:id="@+id/edt_text_val"
+        android:textColor="#ffffff"
+        android:layout_margin="25dp"
+        android:padding="10dp"
+        android:textColorHint="#ffffff"/>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/textInputLayout1"
+        android:layout_toRightOf="@id/edt_text_val"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentRight="true"
+
+
+        >
+
+        <!-- Inside text input layout add
+              an auto complete text view
+                and make its input type to none-->
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewFrom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="From"
+            android:textColor="#ffffff"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:padding="10dp"
+        android:id="@+id/textInputLayout2"
+        android:layout_below="@id/textInputLayout1"
+        android:textColorHint="#ffffff"
+        >
+
+        <!-- Inside text input layout add
+              an auto complete text view
+                and make its input type to none-->
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewTo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="To"
+            android:textColor="#ffffff"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_convert"
+        android:layout_below="@id/textInputLayout2"
+        android:layout_centerInParent="true"
+        android:text="CONVERT"
+        android:layout_margin="20dp"
+        android:textColor="#000000"
+        android:background="@color/cardview_light_background"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:padding="10dp"
+        android:id="@+id/txtView_result"
+        android:layout_below="@id/textInputLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/textInputLayout2"
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+</RelativeLayout>
+</RelativeLayout>
